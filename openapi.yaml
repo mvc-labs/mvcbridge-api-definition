@@ -287,3 +287,6 @@ components:
         targetAmount:
           type: string
           description: Amount you can receive after the fee, use String for large values.
+        processTxid:
+          type: string
+          description: The txid of the transaction that processed your request.
