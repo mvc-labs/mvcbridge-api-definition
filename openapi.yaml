@@ -194,12 +194,16 @@ components:
           description: The confirmation needed for the deposit transaction.
           type: integer
         withdrawGasFee:
-          description: Gas fee to cover onchain transfer. AmountYouReceive = amountYouSent - withdrawGasFee - withdrawBridgeFeeRate * amountYouSend
+          description: Gas fee to cover onchain transfer. AmountYouReceive = amountYouSent - withdrawGasFee - withdrawBridgeFeeRate * amountYouSend - withdrawBridgeFeeFixed
           type: integer
           format: int64
         withdrawBridgeFeeRate:
-          description: The service fee rate of bridge. AmountYouReceive = amountYouSent - withdrawGasFee - withdrawBridgeFeeRate * amountYouSend
+          description: The service fee rate of bridge. AmountYouReceive = amountYouSent - withdrawGasFee - withdrawBridgeFeeRate * amountYouSend - withdrawBridgeFeeFixed
           type: string
+        withdrawBridgeFeeFixed:
+          description: The service fee fixed amount of bridge. AmountYouReceive = amountYouSent - withdrawGasFee - withdrawBridgeFeeRate * amountYouSend - withdrawBridgeFeeFixed
+          type: integer
+          format: int64
     OrderRegisterRequest:
       type: object
       description: Register a bridging request.
